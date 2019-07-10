@@ -4,28 +4,28 @@
 
 <table class='table'>
   <thead>
-    <tr>
+    <tr class="p-3 mb-2 bg-success text-white">
       <th>Name</th>
       <th>Start date</th>
       <th>End date</th>
       <th>Max students</th>
       <th>Description</th>
-      <th colspan="3"></th>
+      <th colspan="4"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @events.each do |event| %>
       <tr>
-        <td><%= event.name %></td>
-        <td><%= event.start_date %></td>
-        <td><%= event.end_date %></td>
-        <td><%= event.max_students %></td>
-        <td><%= event.description %></td>
-        <td><%= link_to 'Register', register_to_event_path(event) %></td>
-        <td><%= link_to 'Show', event %></td>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="border border-success"><%= event.name %></td>
+        <td class="border border-success"><%= event.start_date %></td>
+        <td class="border border-success"><%= event.end_date %></td>
+        <td class="border border-success"><%= event.max_students %></td>
+        <td class="border border-success"><%= event.description %></td>
+        <td class="border border-warning"><%= link_to 'Register', register_to_event_path(event) %></td>
+        <td class="border border-warning"><%= link_to 'Show', event %></td>
+        <td class="border border-warning"><%= link_to 'Edit', edit_event_path(event) %></td>
+        <td class="border border-warning"><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

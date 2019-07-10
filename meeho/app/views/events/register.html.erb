@@ -8,9 +8,9 @@
     <%= submit_tag "Registrar usuario" %>
 <% end %>
 
-<table>
+<table class='table'>
     <thead>
-        <tr>
+        <tr class="p-3 mb-2 bg-success text-white">
         <th>Email</th>
         </tr>
     </thead>
@@ -18,7 +18,7 @@
         Tabla de usuarios
         <% @users_of_event.each do |user| %>
             <tr>
-                <td> <%= user.email %> </td>
+                <td class="border border-success"> <%= user.email %> </td>
             <tr>
         <% end %>
     </tbody>

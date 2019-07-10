@@ -2,9 +2,9 @@
 
 <h1>Users</h1>
 
-<table>
+<table class='table'>
   <thead>
-    <tr>
+    <tr class="p-3 mb-2 bg-success text-white">
       <th>Email</th>
       <th>First name</th>
       <th>Last name</th>
@@ -16,13 +16,13 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= user.email %></td>
-        <td><%= user.first_name %></td>
-        <td><%= user.last_name %></td>
-        <td><%= user.date_of_birth %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="border border-success"><%= user.email %></td>
+        <td class="border border-success"><%= user.first_name %></td>
+        <td class="border border-success"><%= user.last_name %></td>
+        <td class="border border-success"><%= user.date_of_birth %></td>
+        <td class="border border-warning"><%= link_to 'Show', user %></td>
+        <td class="border border-warning"><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td class="border border-warning"><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
