@@ -6,7 +6,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Event.create(name: 'RubySchool', start_date: DateTime.now,
-    end_date: 6.weeks.from_now, description: 'La mejor manera de aprender Ruby on Rails')
-User.create(email: 'admin@mehoo.com', first_name: 'César', last_name: 'Sáenz',
+Event.create(
+    name: 'RubySchool', 
+    start_date: DateTime.now,
+    end_date: 6.weeks.from_now, 
+    description: 'La mejor manera de aprender Ruby on Rails')
+
+User.create(
+    email: 'admin@mehoo.com', 
+    first_name: 'César', 
+    last_name: 'Sáenz',
     date_of_birth: DateTime.new(1997, 11, 26))
