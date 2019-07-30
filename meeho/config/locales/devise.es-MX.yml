@@ -66,3 +66,6 @@ es-MX:
         subject: 'Instrucciones de desbloqueo'
     views:
       log_in: 'Iniciar sesión'
+      sign_up: 'Regístrate'
+      forgot_password: 'Restablecer contraseña'
+      confirmation_instructions: 'Reenviar instrucciones de confirmación'
