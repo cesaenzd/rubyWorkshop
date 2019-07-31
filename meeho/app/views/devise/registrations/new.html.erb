@@ -4,6 +4,21 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name, id: :user_first_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name, id: :user_last_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date_of_birth %><br />
+    <%= f.date_select :date_of_birth, id: :user_date_of_birth, start_year: Date.today.year, end_year: Date.today.year - 100 %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
@@ -11,7 +26,7 @@
   <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <em>(<%= t('validations.minimum_characters', minimum_characters: @minimum_password_length) %>)</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>

@@ -69,3 +69,5 @@ es-MX:
       sign_up: 'Regístrate'
       forgot_password: 'Restablecer contraseña'
       confirmation_instructions: 'Reenviar instrucciones de confirmación'
+  validations:
+    minimum_characters: '%{minimum_characters} caracteres minimo'
